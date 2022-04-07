@@ -13,15 +13,13 @@ This would be a tedious process, but luckily, you have Burp, and its trusty Intr
 1. [Install Burp](https://guides.codepath.org/websecurity/Installing-Burp) - Burp is used by cybersecurity professionals everywhere to view network traffic and test for security vulnerabilities.
 2. [Create a Portswigger account](https://portswigger.net/users/register) - Portswigger is the maker of Burp and has an [Academy](https://portswigger.net/web-security) to hone your cybersecurity skills.
 
-:::info
 
-<img alt="link" title="link" src="/images/emoji/unicode/1f517.png"}" style="vertical-align:middle" width="20" height="20" /> Important Links:
+Important Links:
 
 - [Username Enumeration via Different responses](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses)
 - [Candidate usernames](https://portswigger.net/web-security/authentication/auth-lab-usernames)
 - [Candidate passwords](https://portswigger.net/web-security/authentication/auth-lab-passwords)
 
-:::
 
 ### Step 1: Find the login url
 
@@ -35,11 +33,10 @@ This would be a tedious process, but luckily, you have Burp, and its trusty Intr
 4. Right-click the request and click "Send to Intruder"
 <img src='https://i.imgur.com/oh8aeTT.png' title='Burp HTTP Requests' width='' alt='Burp HTTP Requests' />
 
-:::info
 
 Not seeing any requests? Check the intercept. **"Proxy"** -> **"Intercept"** and click the intercept button to say **"Intercept is off"**
 
-:::
+
 
 ### Step 2: Find a registered user
 
@@ -72,7 +69,6 @@ Now that you have a registered user, you want to attempt to login as that user w
 
 Congratulations, young apprentice, you've hacked your first site! The blog owner is grateful to you for reporting a vulnerable user.
 
-:::info
 
 **Getting an error?**
 
@@ -80,7 +76,6 @@ Congratulations, young apprentice, you've hacked your first site! The blog owner
 - In general the sesssion will expire ever 15 minutes. You may need to redo the challenge if you exceed the time.
 - CSRF error? The CSRF token in the request is no longer valid as it was already used to succesfully login. Use a [fresh login page](https://acae1f321e738e3a805597a6006d0077.web-security-academy.net/login) to avoid an error.
 
-:::
 
 ## 3. Submission
 
@@ -94,9 +89,3 @@ Congratulations, young apprentice, you've hacked your first site! The blog owner
 4. Go to the [CodePath application status dashboard](https://apply.codepath.org/dashboard/) and then press the "SUBMIT" button in the pre-work section:
   [<img src='https://i.imgur.com/GQa79TZ.png' title='Prework Submit' width='' alt='Prework Submit' />](https://apply.codepath.org/dashboard)
 5. In the pre-work submission form, link to your GitHub repo.
-
-# Still have questions about pre-work?
-
-* If you encounter technical difficulties while submitting your work, please join our Pre-work Support Workspace **[here](https://go.codepath.org/preworkslack)**. 
-  - This [workspace](https://go.codepath.org/preworkslack) is intended to support applicants with pre-work completion difficulties. 
-  - Make sure to join and [create an account](https://go.codepath.org/preworkslack) with us to get assistance from our awesome team of tech experts and other students who may have encountered the same technical issues as yours!
