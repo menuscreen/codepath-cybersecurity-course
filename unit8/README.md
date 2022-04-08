@@ -79,6 +79,7 @@ Created virtual environment in Docker.
 	1. Post a link with an XSS attack. 
 	2. 		
 			http://localhost:8080/<svg onload=alert('XSS!')>
+	3. On page load, the XSS executes.
   - [ ] References:
 	- [Link 1: wpscan](https://wpscan.com/vulnerability/3ee54fc3-f4b4-4c35-8285-9d6719acecf0)
 	- [Link 2: cve.mitre - 2017-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6817)
