@@ -59,7 +59,7 @@ Created virtual environment in Docker.
 			
 			<a href='/wp-admin/' title="XSS" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(2)//'Hello World</a>	
 			
-	3. After this comment posts sucessfully, any user that comes to the page and mouses over the area will see an alert box demonstrating the xss attack. The alert box will keep popping up everytime the area is hover overed with the mouse cursor. 
+	3. After this comment posts sucessfully, any user that comes to the page and mouses over the area will see an alert box demonstrating the xss attack. The alert box will keep popping up everytime the area is hovered over with the mouse cursor. 
   
   - [ ] References:
     - [Link 1: wpscan](https://wpscan.com/vulnerability/0f027d7d-674b-4a63-9603-25ea68069c1d)
@@ -68,15 +68,23 @@ Created virtual environment in Docker.
 	- [Link 4: wordpress](https://wordpress.org/news/2015/07/wordpress-4-2-3/)
 	- [Link 5: twitter](https://twitter.com/klikkioy/status/624264122570526720)
 	- [Link 6: klikki](https://klikki.fi/adv/wordpress3.html)
-### 3. (Required) Vulnerability Name or ID
+### 3. WordPress  4.0-4.7.2 - Authenticated Stored Cross-Site Scripting (XSS) in URL Embeds
   - [ ] Summary: 
-    - Vulnerability types:
-    - Tested in version:
-    - Fixed in version: 
+    - Vulnerability types: XSS
+    - Tested in version: 4.1
+    - Fixed in version: 4.1.16
   - [ ] GIF Walkthrough: 
+		<img src="URLembed.gif" alt="Authenticated Stored XSS Walkthrough">
   - [ ] Steps to recreate: 
-  - [ ] Affected source code:
-    - [Link 1](https://core.trac.wordpress.org/browser/tags/version/src/source_file.php)
+	1. Post a link with an XSS attack. 
+	2. 		
+			http://localhost:8080/<svg onload=alert('XSS!')>
+  - [ ] References:
+	- [Link 1: wpscan](https://wpscan.com/vulnerability/3ee54fc3-f4b4-4c35-8285-9d6719acecf0)
+	- [Link 2: cve.mitre - 2017-6817](https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-6817)
+    - [Link 3: wordpress](https://wordpress.org/news/2017/03/wordpress-4-7-3-security-and-maintenance-release/)
+    - [Link 4: github](https://github.com/WordPress/WordPress/commit/419c8d97ce8df7d5004ee0b566bc5e095f0a6ca8)
+    - [Link 5: blog.sucuri.net](https://blog.sucuri.net/2017/03/stored-xss-in-wordpress-core.html)
 
 
 ## Resources
@@ -86,10 +94,6 @@ Created virtual environment in Docker.
 - [wpVSkali](https://github.com/0xrutvij/wpVSkali)
 
 GIFs created with [ScreenToGif](https://www.screentogif.com).
-
-## Notes
-
-- Other notes:
 
 ## License
 
