@@ -8,7 +8,6 @@
 
 Created virtual environment in Docker.
   - [ ] GIF Walkthrough: 
-  
 		<img src="docker-wpVSkali.gif" alt="docker-wpVSkali Walkthrough">
 		
 ## Pentesting Report
@@ -19,15 +18,14 @@ Created virtual environment in Docker.
     - Tested in version: 4.1
     - Fixed in version: 4.1.11 
   - [ ] GIF Walkthrough: 
-  
 		<img src="SOMExss.gif" alt="CVE-2016-4566 Walkthrough">
 		
   - [ ] Steps to recreate: 
   
-		1. As a logged in user, leaving a reply/comment to a post using the payload:
+	1. As a logged in user, leaving a reply/comment to a post using the payload:
 			
-		2.	
-		```
+	2.	
+			```
 			<button onclick="fire()">Click</button>
 			<script>
 			function fire() {
@@ -35,13 +33,13 @@ Created virtual environment in Docker.
 			setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
 				}
 			</script>	
-		```
+			```
 			
 			
-		3. After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
+	3. After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
 			
 			
-		4. In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
+	4. In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
 			
   - [ ] References:
     - [Link 1: wpscan](https://wpscan.com/vulnerability/a82a6c6f-1787-4adc-84dd-3151f1edfd06)
@@ -106,7 +104,7 @@ Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-    http://www.apache.org/licenses/LICENSE-2.0
+http://www.apache.org/licenses/LICENSE-2.0
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
