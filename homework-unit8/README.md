@@ -24,9 +24,9 @@ Created virtual environment in Docker.
 		
   - [ ] Steps to recreate: 
   
-			- As a logged in user, leaving a reply/comment to a post using the payload:
+		1. As a logged in user, leaving a reply/comment to a post using the payload:
 			
-			```
+		2.	```
 			<button onclick="fire()">Click</button>
 			<script>
 			function fire() {
@@ -37,10 +37,10 @@ Created virtual environment in Docker.
 			```
 			
 			
-			- After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
+		3. After this comment posts sucessfully, any user that comes across the post will see a clickable button for the comment. If that user clicks the button, the XSS attack will execute and attempt to download a malicious payload from the attack. 
 			
 			
-			- In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
+		4. In the gif walkthrough, my browser extentions sucessfully blocks the attack from downloading the file, but a user without the proper safeguards would be prompted to download a file. 
 			
   - [ ] References:
     - [Link 1: wpscan] (https://wpscan.com/vulnerability/a82a6c6f-1787-4adc-84dd-3151f1edfd06)
