@@ -13,7 +13,7 @@ The six possible exploits are:
 * Cross-Site Request Forgery (CSRF)
 * Session Hijacking/Fixation
 
-Each color is vulnerable to only 2 of the 6 possible exploits. First discover which color has the specific vulnerability, then write a short description of how to exploit it, and finally demonstrate it using screenshots compiled into a GIF.
+Each color is vulnerable to only 2 of the 6 possible exploits. 1 per color required for full points, additional exploit per color for extra credit. First discover which color has the specific vulnerability, then write a short description of how to exploit it, and finally demonstrate it using screenshots compiled into a GIF.
 
 ## Blue
 
@@ -46,11 +46,11 @@ Description:
 
 ## Red
 
-Vulnerability #1: __________________
+Vulnerability #1: Insecure Direct Object Reference (IDOR)
 
-Description:
+Description: The Red version of the Globitek website is vulnerable to IDOR attacks. A malicious user may notice that the URL's can be manipulated. Demonstrated in the attack below, a malicious user may notice the id parameter on the "Find a Salesperson" page where the URL can simply be changed. Without knowing specifically what to look for, an attacker might use a tool like Burp Suite to enumerate through possible id values and see what the site returns back. In this simple case, the attacker sends an http request to the intruder tool, modifies the positions and payloads and starts the attack to enumerate through possible id values of 1-20. The attacker finds an unlisted salesperson under id number 11 and is able to gather private information that the individual was fired for stealing. 
 
-<img src="red-vuln1.gif">
+<img src="red-idor.gif">
 
 Vulnerability #2: __________________
 
