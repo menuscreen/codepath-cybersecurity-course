@@ -41,11 +41,11 @@ The `failure` class is returned to valid user and the `failed` class is returned
 
 <img src="green-UserEnumeration.gif">
 
-Vulnerability #2: __________________
+Vulnerability #2: Cross-Site Scripting (XSS)
 
-Description:
+Description: The Green version of the site is also vulnerable to xss attacks. A user could write a malicious script into the contact form where it is stored until an administrator logs in and views the feedback page. Demonstrated below:
 
-<img src="green-vuln2.gif">
+<img src="green-xss.gif">
 
 
 ## Red
