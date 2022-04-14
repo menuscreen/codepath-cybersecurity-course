@@ -39,7 +39,7 @@ class='failure' vs class='failed'
 ```
 The `failure` class is returned to valid user and the `failed` class is returned to those usernames that do not exist. Setting up burp suite to enumerate through a list of possible user names, an attacker could filter out data of which user names could be valid. In burp, a pitchfork intruder attack was used with two payloads, a recursive grep payload to overcome the csrf tokens when making multiple requests, and a simple list to enumerate through usernames.  
 
-<img src="green-UserEmumeration.gif">
+<img src="green-UserEnumeration.gif">
 
 Vulnerability #2: __________________
 
