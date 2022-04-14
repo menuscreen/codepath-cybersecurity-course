@@ -1,6 +1,6 @@
 # Project 8 - Pentesting Live Targets
 
-Time spent: **X** hours spent in total
+Total time spent: ~**X** hours 
 
 > Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
 
@@ -31,11 +31,15 @@ Description:
 
 ## Green
 
-Vulnerability #1: __________________
+Vulnerability #1: Username Enumeration
 
-Description:
+Description: A malicious user may notice a difference in how a site responds to failed login attempts to provide clues to valid user names. In the attack below, a valid user returns a bold text, and a invalid user returns regular text. When inspecting the source of the returned html, there is a diffeence between:
+```
+class='failure' vs class='failed'
+```
+The `failure` class is returned to valid user and the `failed` class is returned to those usernames that do not exist. Setting up burp suite to enumerate through a list of possible user names, an attacker could filter out data of which user names could be valid. In burp, a pitchfork intruder attack was used with two payloads, a recursive grep payload to overcome the csrf tokens when making multiple requests, and a simple list to enumerate through usernames.  
 
-<img src="green-vuln1.gif">
+<img src="green-UserEmumeration.gif">
 
 Vulnerability #2: __________________
 
@@ -61,4 +65,6 @@ Description:
 
 ## Notes
 
-Describe any challenges encountered while doing the work
+- [Link: Anti-CSRF Tokens](https://warroom.rsmus.com/updating-anti-csrf-tokens-burp-suite/)
+- [Link: Session Handling Rules](https://portswigger.net/support/using-burp-suites-session-handling-rules-with-anti-csrf-tokens)
+- [Link: Using Burp Intruder to Test CSRF Protected Applications](https://blog.nvisium.com/p606)
