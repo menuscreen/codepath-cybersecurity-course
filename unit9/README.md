@@ -1,6 +1,6 @@
 # Project 8 - Pentesting Live Targets
 
-Total time spent: ~**X** hours 
+Total time spent: ~**6**+ hours 
 
 > Objective: Identify vulnerabilities in three different versions of the Globitek website: blue, green, and red.
 
@@ -17,17 +17,17 @@ Each color is vulnerable to only 2 of the 6 possible exploits. 1 per color requi
 
 ## Blue
 
-Vulnerability #1: __________________
+Vulnerability #1: SQL Injection (SQLi)
+
+Description: The Blue version of the Globitek website is not properly sanitizing SQL inputs. In the gif below, the server accepts a single qoute as a parameter value and responds with a `Database query failed` message. Improper character sanitization could lead to SQLi attacks. 
+
+<img src="blue-sqli.gif">
+
+Vulnerability #2: _______TBD________
 
 Description:
 
-<img src="blue-vuln1.gif">
-
-Vulnerability #2: __________________
-
-Description:
-
-<img src="blue-vuln2.gif">
+`<img src="blue-vuln2.gif">`
 
 ## Green
 
@@ -56,11 +56,11 @@ Description: The Red version of the Globitek website is vulnerable to IDOR attac
 
 <img src="red-idor.gif">
 
-Vulnerability #2: __________________
+Vulnerability #2: _______TBD________
 
 Description:
 
-<img src="red-vuln2.gif">
+`<img src="red-vuln2.gif">`
 
 
 ## Notes
