@@ -59,6 +59,46 @@ gcloud compute ssh mhn-admin
 
 <img src="mhn-admin.gif">
 
+- Modern Honey Network (MHN) Admin Application:
+  - install time about 30 mins
+  - updated ubuntu and installed python-magic
+```bash
+sudo apt update
+sudo apt install git python-magic -y
+```
+  - cloned MHN repo
+  - patched and installed python package
+```bash
+cd /opt/
+sudo git clone https://github.com/pwnlandia/mhn.git
+cd mhn/
+
+sudo sed -i 's/Flask-SQLAlchemy==2.3.2/Flask-SQLAlchemy==2.5.1/g' server/requirements.txt
+
+sudo ./install.sh
+```
+```bash
+Do you wish to run in Debug mode? y/n: `n`
+Superuser email: `any email used to login to admin console`
+Superuser password: `choose any password and confirm`
+Server base url ["http://#.#.#.#"]: `Enter to accept default value`
+Honeymap url ["http://#.#.#.#:3000"]: `Enter to accept default value`
+Mail server address ["localhost"]: `Enter to accept default value`
+Mail server port [25]: `Enter to accept default value`
+Use TLS for email?: y/n `n`
+Use SSL for email?: y/n `n`
+Mail server username [""]: `Enter to accept default value`
+Mail server password [""]: `Enter to accept default value`
+Mail default sender [""]: `Enter to accept default value`
+Path for log file ["/var/log/mhn/mhn.log"]: `Enter to accept default value`
+Would you like to integrate with Splunk? (y/n) `n`
+Would you like to install ELK? (y/n) `n`
+Would you like to add MHN rules to UFW? (y/n) `n`
+```
+  - Logged in to Admin console via external IP using credentials established during installation
+    - note: no data available - have not deployed any honeypots yet
+
+<img src="mhn-admin-application.gif">
 ### Dionaea Honeypot Deployment (Required)
 
 **Summary:** Briefly in your own words, what does dionaea do?
@@ -94,3 +134,6 @@ SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
 ## Notes
 
 Describe any challenges encountered while doing the assignment.
+- [Google Cloud Free Trial](https://cloud.google.com/free/)
+- [Google Cloud Compute Engine Docs](https://cloud.google.com/compute/docs)
+- [Modern Honey Network - MHN Documentation](https://github.com/pwnlandia/mhn)
