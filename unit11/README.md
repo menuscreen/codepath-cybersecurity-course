@@ -199,17 +199,27 @@ gcloud compute scp mhn-admin:~/session.json ./session.json
 **Summary:** Using ClamAV - scan results show 1 infected file. 
 
 
-- Changed Directory to root and ran clamscan command:
+- clamscan command to scan for viruses:
 ```bash
-cd /
-clamscan -rvz
+clamscan -r -i / 
 ```
 <img src="clam-av-scan.png">
 
-MD5 Hash: *Run `md5sum` on the file and record the hash here.*
+MD5 Hash: 
+```bash
+md5sum /usr/bin/sctest
+67f9cf3f8412f7bb17c8f2ae9abcbe0a /usr/bin/sctest
+``` 
 
 SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
+```bash
+sha1sum /usr/bin/sctest
+500e44976d5e3baa4a22c9134f678e91bd25e69b  /usr/bin/sctest
+``` 
 
+<img src="virustotal-search.png">
+
+- [THREAT RESEARCH - Shikata Ga Nai Encoder Still Going Strong | STEVE MILLER, EVAN REESE, NICK CARR| OCT 21, 2019](https://www.fireeye.com/blog/threat-research/2019/10/shikata-ga-nai-encoder-still-going-strong.html)
 
 ## Notes
 
