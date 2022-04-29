@@ -99,11 +99,34 @@ Would you like to add MHN rules to UFW? (y/n) `n`
     - note: no data available - have not deployed any honeypots yet
 
 <img src="mhn-admin-application.gif">
+
 ### Dionaea Honeypot Deployment (Required)
 
 **Summary:** Briefly in your own words, what does dionaea do?
 
+- Dionaea is a honeypot designed to trap malware so that it can be exported and examined by security researchers. It offers various services on exposed ports to the internet that can attract attackers attempting to exploit vulnerabilities. 
+
 <img src="dionaea-honeypot.gif">
+
+- Only after a few minutes we can see data coming into the MHN Admin Console that traffic and attacks are coming into the Dionaea Honey Pot.
+
+<img src="dionaea-honeypot2.gif">
+
+- After running an nmap scan of the dionaea honey pot, the following ports were exposed:
+
+| Port Number   | Service                                  |
+| :-----------: | ---------------------------------------- |
+| 21            | File Transfer Protocol (FTP)             |
+| 22            | Secure Shell (SSH)                       |
+| 23            | Telnet - unencrypted text                |
+| 42            | Windows Internet Naming Service (WINS)   |
+| 53            | Domain Name Service (DNS)                |
+| 80            | Hypertext Transfer Protocol (HTTP)       |
+| 443           | HTTPS                                    |
+| 1723          | Point-to-Point Tunneling Protocol (PPTP) |
+| 3306          | MySQL Protocol                           |
+
+<img src="dionaea-nmap-scan.png">
 
 ### Database Backup (Required) 
 
