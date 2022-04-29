@@ -211,12 +211,13 @@ md5sum /usr/bin/sctest
 67f9cf3f8412f7bb17c8f2ae9abcbe0a /usr/bin/sctest
 ``` 
 
-SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
+SHA1 Hash:
 ```bash
 sha1sum /usr/bin/sctest
 500e44976d5e3baa4a22c9134f678e91bd25e69b  /usr/bin/sctest
 ``` 
 
+VirusTotal Search Result: [link](https://www.virustotal.com/gui/file/c7d56186072fd4edae28e73d1c9f4fa4f6c4956d47d9f067b791b14436d4b1bd/detection)
 <img src="virustotal-search.png">
 
 - [THREAT RESEARCH - Shikata Ga Nai Encoder Still Going Strong | STEVE MILLER, EVAN REESE, NICK CARR| OCT 21, 2019](https://www.fireeye.com/blog/threat-research/2019/10/shikata-ga-nai-encoder-still-going-strong.html)
