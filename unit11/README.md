@@ -194,15 +194,11 @@ gcloud compute scp mhn-admin:~/session.json ./session.json
 
 ### Malware Capture and Identification (Optional)
 
-#### X Malware
+#### Malware
 
-**Summary:** How did you find it? Which honeypot captured it? What does each malware do?
+**Summary:** Using ClamAV - no known malware was detected in the time the honeypot-1 has been running. Will update later if any malware detected in the future.
 
-MD5 Hash: *Run `md5sum` on the file and record the hash here.*
-
-SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
-
-<img src="x-malware.gif">
+<img src="clam-av-scan.png">
 
 ## Notes
 
