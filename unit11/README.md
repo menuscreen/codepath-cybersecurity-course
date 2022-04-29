@@ -105,6 +105,33 @@ Would you like to add MHN rules to UFW? (y/n) `n`
 **Summary:** Briefly in your own words, what does dionaea do?
 
 - Dionaea is a honeypot designed to trap malware so that it can be exported and examined by security researchers. It offers various services on exposed ports to the internet that can attract attackers attempting to exploit vulnerabilities. 
+- Firewall rule - Command to allow traffic for honeypot sensors:
+```bash
+gcloud compute firewall-rules create wideopen \
+    --description="Allow TCP and UDP from Anywhere" \
+    --direction ingress \
+    --priority=1000 \
+    --network=default \
+    --action=allow \
+    --rules=tcp,udp \
+    --source-ranges=0.0.0.0/0 \
+    --target-tags="honeypot"
+
+```
+- Command used to deploy new VM:
+```bash
+gcloud compute instances create "honeypot-1" \
+    --machine-type "n1-standard-1" \
+    --subnet "default" \
+    --maintenance-policy "MIGRATE" \
+    --tags "honeypot" \
+    --image-family "ubuntu-minimal-1804-lts" \
+    --image-project "ubuntu-os-cloud" \
+    --boot-disk-size "10" \
+    --boot-disk-type "pd-standard" \
+    --boot-disk-device-name "honeypot-1"
+```
+- Used the deploy tab from the MHN server admin console to select a script to run from inside the honeypot machine.
 
 <img src="dionaea-honeypot.gif">
 
@@ -136,7 +163,7 @@ Would you like to add MHN rules to UFW? (y/n) `n`
 
 ### Deploying Additional Honeypot(s) (Optional)
 
-<img src="additional-honeypots.png>
+<img src="additional-honeypots.png">
 
 #### Snort Honeypot
 
