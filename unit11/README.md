@@ -196,9 +196,20 @@ gcloud compute scp mhn-admin:~/session.json ./session.json
 
 #### Malware
 
-**Summary:** Using ClamAV - no known malware was detected in the time the honeypot-1 has been running. Will update later if any malware detected in the future.
+**Summary:** Using ClamAV - scan results show 1 infected file. 
 
+
+- Changed Directory to root and ran clamscan command:
+```bash
+cd /
+clamscan -rvz
+```
 <img src="clam-av-scan.png">
+
+MD5 Hash: *Run `md5sum` on the file and record the hash here.*
+
+SHA1 Hash: *Run `sha1sum` on the file and record the hash here.*
+
 
 ## Notes
 
