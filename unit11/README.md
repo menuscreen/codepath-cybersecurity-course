@@ -136,11 +136,19 @@ Would you like to add MHN rules to UFW? (y/n) `n`
 
 ### Deploying Additional Honeypot(s) (Optional)
 
-#### X Honeypot
+<img src="additional-honeypots.png>
 
-**Summary:** What does this honeypot simulate and do for a security researcher?
+#### Snort Honeypot
 
-<img src="x-honeypot.gif">
+**Summary:** Snort is an (IPS) Intrusion Prevention System. Perfoms packet logging and real-time traffic analysis.
+
+#### Cowrie Honeypot
+
+**Summary:** Cowrie is an SSH and Telnet honeypot used to log brute force attacks and shell interactions performed by attackers.
+
+#### Shockpot Honeypot
+
+**Summary:** Shockpot is a web app honeypot designed to find attackers attempting to exploit the Bash remote code vulnerability, CVE-2014-6271.
 
 ### Malware Capture and Identification (Optional)
 
