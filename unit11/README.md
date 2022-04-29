@@ -159,7 +159,22 @@ gcloud compute instances create "honeypot-1" \
 
 **Summary:** What is the RDBMS that MHN-Admin uses? What information does the exported JSON file record?
 
-*Be sure to upload session.json directly to this GitHub repo/branch in order to get full credit.*
+- To export the data to JSON format, ssh into the MHN admin VM and run the following command:
+```bash
+mongoexport --db mnemosyne --collection session > session.json
+```
+- If file size too large:
+```bash
+truncate --size="<5M" session.json
+```
+- Copy the database back to local machine (or cloudshell) by running the following command:
+```bash
+gcloud compute scp mhn-admin:~/session.json ./session.json
+```
+- The MHN Admin VM uses MongoDB - classified as a NoSQL database program. Information sample below from the exported JSON file. 
+```json
+{"_id":{"$oid":"626c087e616a1e65fc22edd6"},"protocol":"pcap","hpfeed_id":{"$oid":"626c087e616a1e65fc22edd5"},"timestamp":{"$date":"2022-04-29T15:47:10.668Z"},"source_ip":"162.142.125.248","source_port":30113,"destination_port":28008,"identifier":"7c38a012-c7d3-11ec-b90f-42010a960002","honeypot":"dionaea"}
+```
 
 ### Deploying Additional Honeypot(s) (Optional)
 
